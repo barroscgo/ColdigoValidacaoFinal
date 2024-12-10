@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="description" content= "Site do Coldigo Gealadeiras">
+	<meta name="keywords" content= "Geladeiras, Frost-free, refrigeração">
+	<meta name="author" content= "Escola sistemica">
+	<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+	<title>Coldigo geladeiras</title>
+	<link rel="stylesheet" type= "text/css" href="../../css/site.css">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"> </script>
+	<script src="../../js/site.js"></script>
+</head>
+<body>
+	<header>
+	</header>
+	<nav>
+	</nav>
+	<section>
+		<h2>Fale conosco!</h2>
+		<p>Ficou com alguma dúvida? Preencha este formulário e entraremos em contato!</p>
+		<form name="frmfaleconosco" method="get" action="#" onsubmit="return validaFaleConosco()">
+			<fieldset class="faleConosco">
+				<legend>Dados pessoais:</legend>
+				<label for="nome">Nome: </label>
+				<input type="text" name="txtnome" id="nome" placeholder="digite seu nome e sobrenome">
+				<label for="fone">Telefone: </label>
+				<input type="text" name="txtfone" id="fone" placeholder="(99) 9999-9999">
+				<label for="email">E-mail: </label>
+				<input type="email" name="txtemail" id="email">
+			</fieldset>
+			<fieldset class="faleConosco">
+				<legend>Motivo do contato:</legend>
+				<label for="motivo">Motivo: </label>
+				<select name="selmotivo" id="motivo" onchange="verificaMotivo(this.value)">
+					<option value="">Escolha</option>
+					<option value="RE">Reclamação</option>
+					<option value="SU">Sugestão</option>
+					<option value="PR">Informação sobre produto</option>
+				</select>
+				<div id="opcaoProduto"></div>
+				<label for="comentario">Comentário: </label>
+				<textarea name="txacomentario" id="comentario"></textarea>
+				<button type="reset" onclick="verificaMotivo(null)">Limpar</button><button type="submit">Enviar</button>
+			</fieldset>
+		</form>
+	
+	</section>
+	<footer></footer>
+</body>
+</html>
